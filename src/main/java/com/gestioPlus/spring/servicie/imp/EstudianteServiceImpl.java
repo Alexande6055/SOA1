@@ -27,6 +27,8 @@ public class EstudianteServiceImpl implements EstudianteService {
 
     @Override
     public List<Estudiante> obtenerEstudiantes() {
+        List<Estudiante> ts=estudianteRepository.findAll();
+        System.out.println(ts.get(0).getCedula());
         return estudianteRepository.findAll();
     }
 
