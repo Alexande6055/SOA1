@@ -75,7 +75,7 @@
         $('#buscarBtn').click(function() {
             var cedula = $('#cedulaBuscar').val(); // Obtener la cédula ingresada
             if (cedula) {
-                $.get('http://localhost:8080/Apiestudiantes/buscar', { cedula: cedula }, function(data) {
+                $.get('https://soa1-1.onrender.com/Apiestudiantes/buscar', { cedula: cedula }, function(data) {
                     $('#tablaEstudiantes tbody').empty();
 
                     if (data && data.cedula) {
@@ -111,7 +111,7 @@
 
         // Función para cargar todos los estudiantes desde la API
         function cargarEstudiantes() {
-            $.get('http://localhost:8080/Apiestudiantes', function(data) {
+            $.get('https://soa1-1.onrender.com/Apiestudiantes', function(data) {
                 $('#tablaEstudiantes tbody').empty();
 
                 if (data && data.length > 0) {
